@@ -1,0 +1,139 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    {{title}}
+{% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+{% endblock %}
+
+{% block body %}
+
+    <!-- header-wrap -->
+    <div id="header-wrap">
+        <header>
+
+            <hgroup>
+                <h1>
+                    <a href="index">DAW2</a>
+                </h1>
+                <h3>Desarrollo Web en Entorno de Servidor</h3>
+            </hgroup>
+
+            <nav>
+                <ul>
+                    <li><a href="{{ path('index')}}">Home</a></li>
+                    <li><a href="{{ path('servicios')}}">Servicios</a></li>
+                    <li><a href="{{ path('proyectos', {'pagina':'1'})}}">Proyectos</a></li>
+                    <li><a href="{{ path('nosotros')}}">Sobre Nosotros</a></li>
+                    <li><a href="{{ path('contacto')}}">Contacta</a></li>
+                    <li><a href="{{ path('login', {'user':'armando'})}}">Login</a></li>
+                </ul>
+            </nav>
+
+        </header>
+    </div>
+
+    <!-- content-wrap -->
+    <div
+        class="content-wrap">
+
+        <!-- services -->
+        <section id="services">
+
+            <h1>Nuestros servicios.</h1>
+
+            <div class="row no-bottom-margin">
+                <section class="col">
+                    <h2>Diseño Web</h2>
+
+                    <p><img class="align-left" alt="" src="images/services/webdesign.png"/>Pellentesque magna mi, iaculis pharetra eu, fermentum ullamcorper nisi.
+                                            Integer fringilla magna ut quam vulputate erat. Pulvinar cum, ac eu augue ut sit amet
+                                            gravida lacinia, eros massa condimentum sem, a fermentum ligula lorem non.
+                                            Phasellus vulputate.</p>
+                </section>
+                <section class="col mid">
+                    <h2>Desarrollo Web</h2>
+
+                    <p><img class="align-left" alt="" src="images/services/webdevelopment.png"/>In hac habitasse platea risus dictumst. Suspendisse sit amet enim arcu. Aliquam erat volutpat.
+                                            Phasellus a dui nisi. Nunc nec quam vitae nisl vehicula euismod. Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit. Sed commodo ligula blandit risus</p>
+                </section>
+
+                <section class="col">
+                    <h2>Servicios SEO</h2>
+
+                    <p><img class="align-left" alt="" src="images/services/seo-services.png"/>Nascetur augue hac platea enim, egestas pulvinar vut. Pulvinar cum, ac eu, tristie
+                                            acus duis in dictumst non integer! Elit, sed scelerisque odio tortor, sed platea dis? Quis
+                                            cursus parturient ac amet odio in? Nunc Amet urna scelerisque eu lectus placerat.</p>
+
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="col">
+                    <h2>Diseño impreso</h2>
+
+                    <p><img class="align-left" alt="" src="images/services/print-design.png"/>In hac habitasse platea risus dictumst. Suspendisse sit amet enim arcu. Aliquam erat volutpat.
+                                            Phasellus a dui nisi. Nunc nec quam vitae nisl vehicula euismod. Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit. Sed commodo ligula blandit risus</p>
+                </section>
+                <section class="col mid">
+                    <h2>Diseño de Logos &amp; Branding</h2>
+
+                    <p><img class="align-left" alt="" src="images/services/logo-design-and-branding.png"/>Nascetur augue hac platea enim, egestas pulvinar vut. Pulvinar cum, ac eu, tristie
+                                            acus duis in dictumst non integer! Elit, sed scelerisque odio tortor, sed platea dis? Quis
+                                            cursus parturient ac amet odio in? Nunc Amet urna scelerisque eu lectus placerat.</p>
+                </section>
+
+                <section class="col">
+                    <h2>Newsletter</h2>
+
+                    <p><img class="align-left" alt="" src="images/services/newsletter.png"/>Pellentesque magna mi, iaculis pharetra eu, fermentum ullamcorper nisi.
+                                            Integer fringilla magna ut quam vulputate erat. Pulvinar cum, ac eu augue ut sit amet
+                                            gravida lacinia, eros massa condimentum sem, a fermentum ligula lorem non.
+                                            Phasellus vulputate.</p>
+
+                </section>
+            </div>
+
+
+        </section>
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li>
+                    <a href="{{ path('index')}}">Home</a>
+                </li>
+                <li>
+                    <a href="{{ path('servicios')}}">Servicios</a>
+                </li>
+                <li>
+                    <a href="{{ path('proyectos', {'pagina':'1'})}}">Proyectos</a>
+                </li>
+                <li>
+                    <a href="{{ path('nosotros')}}">Sobre Nosotros</a>
+                </li>
+                <li>
+                    <a href="{{ path('contacto')}}">Contacta</a>
+                </li>
+                <li>
+                    <a href="{{ path('login', {'user':'armando'})}}">Login</a>
+                </li>
+            </ul>
+
+            <p class="footer-text">Copyright 2019 DAW2. &nbsp;&nbsp;&nbsp; Designed by
+                <a href="https://www.floridauniversitaria.es">Florida Universitaria</a>
+                |
+                <a href="https://symfony.com" target="_blank">Symfony.com</a>
+            </p>
+        </div>
+
+    </footer>
+    {% block javascript %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

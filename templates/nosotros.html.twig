@@ -1,0 +1,224 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    {{title}}
+{% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+{% endblock %}
+
+{% block body %}
+    <!-- header-wrap -->
+    <div id="header-wrap">
+        <header>
+
+            <hgroup>
+                <h1>
+                    <a href="index">DAW2</a>
+                </h1>
+                <h3>Desarrollo Web en Entorno de Servidor</h3>
+            </hgroup>
+
+            <nav>
+                <ul>
+                    <li><a href="{{ path('index')}}">Home</a></li>
+                    <li><a href="{{ path('servicios')}}">Servicios</a></li>
+                    <li><a href="{{ path('proyectos', {'pagina':'1'})}}">Proyectos</a></li>
+                    <li><a href="{{ path('nosotros')}}">Sobre Nosotros</a></li>
+                    <li><a href="{{ path('contacto')}}">Contacta</a></li>
+                    <li><a href="{{ path('login', {'user':'armando'})}}">Login</a></li>
+                </ul>
+            </nav>
+
+        </header>
+    </div>
+
+    <!-- content-wrap -->
+    <div
+        class="content-wrap">
+
+        <!-- about us -->
+        <section id="about-us" class="clearfix">
+
+            <h1>Sobre Nosotros.</h1>
+
+            <div class="primary">
+
+                <p class="intro">Maecenas eu neque erat, auctor feugiat enim. Sed libero risus, pretium vel
+                                    elementum id, lacinia vel purus. Mauris semper, orci vitae aliquam vestibul,
+                                    lorem nulla auctor nulla, gravida fermentum urna libero eget sapien. Quisque
+                                    cursus, urna quis vestibulum egestas, nibh sem semper erat, a feugiat justo
+                                    dolor eget libero. Quisque cursus, urna quis vestibulum egestas, nibh sem
+                                    semper erat, a feugiat justo dolor eget libero
+                </p>
+
+                <h2>Misión y Visión</h2>
+
+                <p>Sed tempor tortor urna, at pharetra diam auctor quis. Duis rhoncus accumsan faucibus. In finibus semper magna a
+                                    accumsan. Curabitur quis ultrices enim. Etiam commodo ligula vitae sem porta, et gravida nisi malesuada. Morbi a orci id
+                                    mauris pellentesque viverra.</p>
+                <p>Nunc tincidunt ante eu erat volutpat, id dignissim est hendrerit. Vivamus aliquam eleifend
+                                    orci et ultrices. Nulla lobortis nibh eget justo vestibulum fringilla. Nunc eget ullamcorper tellus, laoreet ullamcorper
+                                    magna. Praesent fringilla erat ac bibendum tristique. Sed tortor quam, convallis congue auctor non, tempor ut velit.
+                                    Maecenas eu fringilla diam. Etiam ut elementum urna, ac fermentum dolor. Suspendisse lacinia, lectus et efficitur
+                                    semper, odio orci pulvinar neque, vitae gravida leo orci at sapien. Aenean aliquet nec turpis vitae tincidunt.</p>
+
+                <div class="row no-bottom-margin">
+
+                    <section class="col first">
+
+                        <h2>Nuestro método</h2>
+
+                        <p>Nascetur augue hac platea enim, egestas pulvinar vut. Pulvinar cum, ac eu, tristie
+                                                    acus duis in dictumst non integer! Elit, sed scelerisque odio tortor, sed platea dis? Quis
+                                                    cursus parturient ac amet odio in? Nunc Amet urna scelerisque eu lectus placerat.</p>
+
+                    </section>
+
+                    <section class="col">
+
+                        <h2>Nuestro Enfoque</h2>
+
+                        <p>Pellentesque magna mi, iaculis pharetra eu, fermentum ullamcorper nisi.
+                                                    Integer fringilla magna ut quam vulputate erat. Pulvinar cum, ac eu augue ut sit amet
+                                                    gravida lacinia, eros massa condimentum sem, a fermentum ligula lorem non.
+                                                    Phasellus vulputate.</p>
+
+                    </section>
+
+                </div>
+
+                <h2>Nuestro equipo</h2>
+
+                <ul class="the-team">
+                    <li class="odd">
+                        <div class="thumbnail">
+                            <a href="#"><img alt="thumbnail" src="images/ealderson.png" width="83" height="78"></a>
+                        </div>
+                        <p class="mname">
+                            <a href="#">Elliot Alderson</a>
+                        </p>
+                        <p>Co-founder &amp; Creative Director</p>
+                    </li>
+                    <li>
+                        <div class="thumbnail">
+                            <a href="#"><img alt="thumbnail" src="images/amoss.png" width="83" height="78"></a>
+                        </div>
+                        <p class="mname">
+                            <a href="#">Angela Moss</a>
+                        </p>
+                        <p>Graphic Designer</p>
+                    </li>
+                    <li class="odd">
+                        <div class="thumbnail">
+                            <a href="#"><img alt="thumbnail" src="images/twellick.png" width="83" height="78"></a>
+                        </div>
+                        <p class="mname">
+                            <a href="#">Tyrell Wellick</a>
+                        </p>
+                        <p>Senior Webdesigner</p>
+                    </li>
+
+                    <li>
+                        <div class="thumbnail">
+                            <a href="#"><img alt="thumbnail" src="images/dalderson.png" width="83" height="78"></a>
+                        </div>
+                        <p class="mname">
+                            <a href="#">Darlene Alderson</a>
+                        </p>
+                        <p>Web Developer</p>
+                    </li>
+                </ul>
+
+            </div>
+
+            <aside>
+
+                <h2>Mas sobre nosotros</h2>
+
+                <p>Nascetur augue hac platea enim, egestas pulvinar vut. Pulvinar cum, ac eu, tristie
+                                        acus duis in dictumst non integer! Elit, sed scelerisque odio.</p>
+
+                <a href="#" class="download-btn">Descarga PDF</a>
+
+
+                <h2>Enlaces</h2>
+
+
+                <ul class="link-list">
+                    <li>
+                        <a href="http://www.allsafe.net" title="AllSafe">Allsafe</a>
+                    </li>
+                    <li>
+                        <a href="http://www.ecorp.com" title="E-Corp">E-Corp</a>
+                    </li>
+                    <li>
+                        <a href="http://www.dark-army.org" title="The Dark Army">The Dark Army</a>
+                    </li>
+                    <li>
+                        <a href="http://www.f-society.com" title="FSociety">FSociety</a>
+                    </li>
+                </ul>
+
+
+                <h2>Clientes satisfechos</h2>
+
+                <div class="testimonials">
+                    <blockquote>
+                        <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.
+                                                        Nullam id dolor id nibh ultricies vehicula ut id elit.
+                        </p>
+
+                        <cite>&mdash; Phillip Price, Evil Corp</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>Aenean lacinia bibendum nulla sed consectetur. Cras mattis
+                                                        consectetur purus sit amet fermentum.</p>
+
+                        <cite>&mdash; Dominique DiPierro, FBI</cite>
+                    </blockquote>
+                </div>
+
+            </aside>
+
+
+        </section>
+
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li>
+                    <a href="{{ path('index')}}">Home</a>
+                </li>
+                <li>
+                    <a href="{{ path('servicios')}}">Servicios</a>
+                </li>
+                <li>
+                    <a href="{{ path('proyectos', {'pagina':'1'})}}">Proyectos</a>
+                </li>
+                <li>
+                    <a href="{{ path('nosotros')}}">Sobre Nosotros</a>
+                </li>
+                <li>
+                    <a href="{{ path('contacto')}}">Contacta</a>
+                </li>
+                <li>
+                    <a href="{{ path('login', {'user':'armando'})}}">Login</a>
+                </li>
+            </ul>
+
+            <p class="footer-text">Copyright 2019 DAW2. &nbsp;&nbsp;&nbsp; Designed by
+                <a href="https://www.floridauniversitaria.es">Florida Universitaria</a>
+                |
+                <a href="https://symfony.com" target="_blank">Symfony.com</a>
+            </p>
+        </div>
+
+    </footer>
+    {% block javascript %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

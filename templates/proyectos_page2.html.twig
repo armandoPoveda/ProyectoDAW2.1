@@ -1,0 +1,110 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    {{title}}
+{% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+{% endblock %}
+
+{% block body %}
+
+    <!-- header-wrap -->
+    <div id="header-wrap">
+        <header>
+
+            <hgroup>
+                <h1>
+                    <a href="index">DAW2</a>
+                </h1>
+                <h3>Desarrollo Web en Entorno de Servidor</h3>
+            </hgroup>
+
+            <nav>
+                <ul>
+                    <li><a href="{{ path('index')}}">Home</a></li>
+                    <li><a href="{{ path('servicios')}}">Servicios</a></li>
+                    <li><a href="{{ path('proyectos', {'pagina':'1'})}}">Proyectos</a></li>
+                    <li><a href="{{ path('nosotros')}}">Sobre Nosotros</a></li>
+                    <li><a href="{{ path('contacto')}}">Contacta</a></li>
+                    <li><a href="{{ path('login', {'user':'armando'})}}">Login</a></li>
+                </ul>
+            </nav>
+
+        </header>
+    </div>
+
+    <!-- content-wrap -->
+    <div
+        class="content-wrap">
+
+        <!-- products -->
+        <section id="projects">
+
+            <h1>Proyectos realizados.</h1>
+
+            <ul class="project-list clearfix">
+
+                <li class="project-thumb">
+                    <div class="thumb">
+                        <a class="lightbox" href="images/thumbs/big/sneakers.jpg" title="Cosmic Sneakers"><img src="images/thumbs/sneakers.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <h3 class="entry-title">Cosmic Sneakers</h3>
+                </li>
+
+                <li class="project-thumb last">
+                    <div class="thumb">
+                        <a class="lightbox" href="images/thumbs/big/vector-flower-fullscreen.jpg" title="Abstract Vectors"><img src="images/thumbs/vector-flower-fullscreen.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <h3 class="entry-title">Abstract Vector</h3>
+                </li>
+
+            </ul>
+            <div class="pagination">
+                <a href="{{ path('proyectos', {'pagina':'1'})}}">«</a>
+                <a href="{{ path('proyectos', {'pagina':'1'})}}">1</a>
+                <a href="proyectos_page2">2</a>
+                <a href="#">»</a>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li>
+                    <a href="{{ path('index')}}">Home</a>
+                </li>
+                <li>
+                    <a href="{{ path('servicios')}}">Servicios</a>
+                </li>
+                <li>
+                    <a href="{{ path('proyectos', {'pagina':'1'})}}">Proyectos</a>
+                </li>
+                <li>
+                    <a href="{{ path('nosotros')}}">Sobre Nosotros</a>
+                </li>
+                <li>
+                    <a href="{{ path('contacto')}}">Contacta</a>
+                </li>
+                <li>
+                    <a href="{{ path('login', {'user':'armando'})}}">Login</a>
+                </li>
+            </ul>
+
+            <p class="footer-text">Copyright 2019 DAW2. &nbsp;&nbsp;&nbsp; Designed by
+                <a href="https://www.floridauniversitaria.es">Florida Universitaria</a>
+                |
+                <a href="https://symfony.com" target="_blank">Symfony.com</a>
+            </p>
+        </div>
+
+    </footer>
+    {% block javascript %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

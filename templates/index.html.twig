@@ -1,0 +1,139 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    {{title}}
+{% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+{% endblock %}
+
+{% block body %}
+        <!-- header-wrap -->
+        <div id="header-wrap">
+            <header>
+
+                <hgroup>
+                    <h1>
+                        <a href="index">DAW2</a>
+                    </h1>
+                    <h3>Desarrollo Web en Entorno de Servidor</h3>
+                </hgroup>
+
+                <nav>
+                    <ul>
+                        <li><a href="{{path('index')}}">Home</a></li>
+                        <li><a href="{{path('servicios')}}">Servicios</a></li>
+                        <li><a href="{{path('proyectos',{'pagina':'1'})}}">Proyectos</a></li>
+                        <li><a href="{{path('nosotros')}}">Sobre Nosotros</a></li>
+                        <li><a href="{{path('contacto')}}">Contacta</a></li>
+                        <li><a href="{{path('login',{'user':'armando'})}}">Login</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+        </div>
+
+        <!-- content-wrap -->
+        <div
+            class="content-wrap">
+
+            <!-- main -->
+            <section id="main">
+
+                <div class="intro-box">
+                    <h1>Bienvenidos.</h1>
+
+                    <p class="intro">Hola a todos. Somos Daw2. Somos un pequeño estudio de diseño con 
+                                                                                                sede en algún lugar, creamos sitios web, interfaces de usuario, 
+                                                                                                logotipos y otras cosas digitales. Estamos aquí para que usted y 
+                                                                                                su negocio destaquen entre la multitud.</p>
+
+                    <p class="intro">Lea mas
+                        <a href="nosotros.html">sobre nosotros</a>
+                        o
+                        <a href="contacto.html">Contáctenos</a>
+                        si quieres contratarnos para su próximo proyecto.</p>
+
+                </div>
+
+                <div class="slider-wrapper">
+
+                    <div id="slider" class="nivoSlider">
+                        <img src="images/slides/slide1.png" width="383" height="198" alt=""/>
+                        <img src="images/slides/slide2.png" width="383" height="198" alt=""/>
+                        <img src="images/slides/slide3.png" width="383" height="198" alt="" title="#htmlcaption"/>
+                    </div>
+                    <div id="htmlcaption" class="nivo-html-caption">
+                        <strong>Pida</strong>
+                        <em>PRESUPUESTO</em>
+                        sin compromiso
+                        <a href="contacto">aquí</a>.
+                    </div>
+                </div>
+
+                <div class="row no-bottom-margin">
+
+                    <section class="col">
+                        <h2>Ideas Creativas</h2>
+
+                        <p>Nascetur augue hac platea enim, egestas pulvinar vut. Pulvinar cum, ac eu, tristie
+                                                                                                acus duis in dictumst non integer! Elit, sed scelerisque odio tortor, sed platea dis? Quis
+                                                                                                cursus parturient ac amet odio in? Nunc Amet urna scelerisque eu lectus placerat.</p>
+                    </section>
+                    <section class="col mid">
+                        <h2>Innovación</h2>
+
+                        <p>Pellentesque magna mi, iaculis pharetra eu, fermentum ullamcorper nisi.
+                                                                                                Integer fringilla magna ut quam vulputate erat. Pulvinar cum, ac eu augue ut sit amet
+                                                                                                gravida lacinia, eros massa condimentum sem, a fermentum ligula lorem non.
+                                                                                                Phasellus vulputate.</p>
+                    </section>
+
+                    <section class="col">
+                        <h2>Diseño y Desarrollo</h2>
+
+                        <p>In hac habitasse platea risus dictumst. Suspendisse sit amet enim arcu. Aliquam erat volutpat.
+                                                                                                Phasellus a dui nisi. Nunc nec quam vitae nisl vehicula euismod. Lorem ipsum dolor sit amet,
+                                                                                                consectetur adipiscing elit. Sed commodo ligula blandit risus.</p>
+                    </section>
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div class="footer-content">
+                <ul class="footer-menu">
+                    <li>
+                        <a href="{{ path('index')}}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('servicios')}}">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('proyectos', {'pagina':'1'})}}">Proyectos</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('nosotros')}}">Sobre Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('contacto')}}">Contacta</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('login', {'user':'armando'})}}">Login</a>
+                    </li>
+                </ul>
+
+                <p class="footer-text">Copyright 2019 DAW2. &nbsp;&nbsp;&nbsp; Designed by
+                    <a href="https://www.floridauniversitaria.es">Florida Universitaria</a>
+                    |
+                    <a href="https://symfony.com" target="_blank">Symfony.com</a>
+                </p>
+            </div>
+
+        </footer>
+        {% block javascript %}
+            {{ parent() }}
+        {% endblock %}
+{% endblock %}

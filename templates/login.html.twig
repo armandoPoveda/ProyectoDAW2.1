@@ -1,0 +1,115 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    {{title}}
+{% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+{% endblock %}
+
+{% block body %}
+    <!-- header-wrap -->
+    <div id="header-wrap">
+        <header>
+
+            <hgroup>
+                <h1>
+                    <a href="index">DAW2</a>
+                </h1>
+                <h3>Desarrollo Web en Entorno de Servidor</h3>
+            </hgroup>
+
+            <nav>
+                <ul>
+                    <li><a href="{{ path('index')}}">Home</a></li>
+                    <li><a href="{{ path('servicios')}}">Servicios</a></li>
+                    <li><a href="{{ path('proyectos', {'pagina':'1'})}}">Proyectos</a></li>
+                    <li><a href="{{ path('nosotros') }}">Sobre Nosotros</a></li>
+                    <li><a href="{{ path('contacto') }}">Contacta</a></li>
+                    <li><a href="{{ path('login') }}">Login</a></li>
+                </ul>
+            </nav>
+
+        </header>
+    </div>
+
+    <!-- content-wrap -->
+    <div
+        class="content-wrap">
+
+        <!-- login -->
+        <section id="login" class="clearfix">
+
+            <h1>Login</h1>
+
+            <div class="primary">
+
+                <p class="intro">{{user.name}}</p>
+                <form method="post" action="{{ path('index')}}" id="loginform">
+
+                    <div>
+                        <p>Credenciales</p>
+                    </div>
+
+                    <div>
+                        <label>Usuario
+                            <span class="required">*</span>
+                        </label>
+                        <input name="user" type="text" id="user" value="{{user.name}}"/>
+                    </div>
+
+                    <div>
+                        <label>Contraseña
+                            <span class="required">*</span>
+                        </label>
+                        <input name="pasword" type="password" id="password" value="{{password}}"/>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Entrar" class="button">
+                        <input type="reset" value="Reset" class="button">
+                    </div>
+
+                </form>
+            </div>
+
+
+        </section>
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li>
+                    <a href="{{ path('index')}}">Home</a>
+                </li>
+                <li>
+                    <a href="{{ path('servicios')}}">Servicios</a>
+                </li>
+                <li>
+                    <a href="{{ path('proyectos', {'pagina':'1'})}}">Proyectos</a>
+                </li>
+                <li>
+                    <a href="{{ path('nosotros')}}">Sobre Nosotros</a>
+                </li>
+                <li>
+                    <a href="{{ path('contacto')}}">Contacta</a>
+                </li>
+                <li>
+                    <a href="{{ path('login') }}">Login</a>
+                </li>
+            </ul>
+
+            <p class="footer-text">Copyright 2019 DAW2. &nbsp;&nbsp;&nbsp; Designed by
+                <a href="https://www.floridauniversitaria.es">Florida Universitaria</a>
+                |
+                <a href="https://symfony.com" target="_blank">Symfony.com</a>
+            </p>
+        </div>
+
+    </footer>
+    {% block javascript %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}
